@@ -14,7 +14,7 @@ function App() {
 
         {/* Hamburger Icon */}
         <div
-          className="menu-icon"
+          className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}

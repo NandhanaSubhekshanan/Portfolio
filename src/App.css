@@ -17,6 +17,12 @@ body, html {
   min-height: 100%;
 }
 
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
 .App {
   flex: 1;
 }
@@ -26,7 +32,16 @@ header {
   position: fixed;
   width: 97%;
   padding: 15px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 100;
+  background: #222;
+  color: white;
 }
+
 .logo {
   display: inline-block;
   font-size: 1.5rem;
@@ -120,11 +135,15 @@ header {
   color: #121212;
 }
 .hero-image img {
-  width: 500px;
+  width: 350px;
   border-radius: 4px;
-  height: 590px;
+  height: auto;
   object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 50px;
 }
+
 
 /* About Section */
 .about {
@@ -258,9 +277,17 @@ header {
     position: absolute;
     right: 20px;
     top: 15px;
+    margin-left: auto;
+    margin-right: 20px;
     z-index: 1000;
   }
 
+  .hero-text h2{
+    margin-top: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
   .hero-text h2 span {
     color: #4b9c9f;
     font-size: 2rem;
@@ -302,13 +329,14 @@ header {
   }
 
   .hero-image img {
-    width: 400px;  /* Smaller photo size */
-    height: 400px;
+    width: 200px;  /* Smaller photo size */
+    height: auto;
     border-radius: 50%; 
     object-fit: cover;
     display: block;
     margin: 20px auto;
-    
+    margin-top: 19px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   }
 
   .hero {
@@ -323,6 +351,8 @@ header {
 @media (min-width: 769px) {
   .menu-icon {
     display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 
   .nav-links {
